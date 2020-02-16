@@ -136,28 +136,15 @@ holiday_hash =
 
 def all_supplies_in_holidays(holiday_hash)
 
-holiday_hash.to_a
-return holiday_hash
-holiday_hash.each {|key,value| puts "#{key}: #{value}"}
-
+holiday_hash.each do | season, holiday|
+     puts "#{season.capitalize}:"
+     holiday.each do |holiday, item|
+       puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
+     end
+  end 
+end
 end
     
-
-
-#   puts season.capitalize.to_s + ":"
-#   holiday_name_hash.each do |attribute,data|
-#     puts attribute.capitalize.to_s 
-  
- 
-#end
-#end
-
- puts all_supplies_in_holidays(holiday_hash)
-
-
-
-  
-
 
 
 def all_holidays_with_bbq(holiday_hash)
