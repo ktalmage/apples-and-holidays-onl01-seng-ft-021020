@@ -148,9 +148,6 @@ all_supplies_in_holidays(holiday_hash)
 
 
 
-    
-
-
 def all_holidays_with_bbq(holiday_hash)
 
 holiday_hash.map do |season, holiday|
