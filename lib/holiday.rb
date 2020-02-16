@@ -40,15 +40,13 @@ end
 array.flatten
 end
 
-def all_supplies_in_holidays(holiday_hash)
-  str = ''
-  holiday_hash.each do |season, holiday|
-    str += "#{season.capitalize}:\n"
-    holiday.each do |holiday, supplies|
-    str += "  #{holiday.to_s.split("_").map{|x| x.capitalize}.join(" ")}: #{supplies.join(", ")}\n"
+def all_supplies_in_holidays(supplies_hash)
+  holiday_supplies.each do |season, holidays|
+    puts "#{season.capitalize}:"
+    holidays.each do |holiday, supplies|
+      puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+    end
   end
-end
-  puts str
 end
 
 def all_holidays_with_bbq(holiday_hash)
