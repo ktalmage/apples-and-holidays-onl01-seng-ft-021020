@@ -144,7 +144,7 @@ holiday_hash.each do | season, holiday|
   end 
 end
 
-all_supplies_in_holidays(holiday_supplies)
+all_supplies_in_holidays(holiday_hash)
 
 
 
